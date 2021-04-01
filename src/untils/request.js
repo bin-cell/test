@@ -5,6 +5,6 @@ import axios from "axios"
 
 // 创建实例 
 const request = axios.create({
-    baseURL: 'http://localhost:8080/'
+    baseURL: 'http://localhost:8080/login'
 })
 export default request

@@ -29,35 +29,38 @@ export default {
     data () {
         return {
             user:{
-                mobile:'',
-                code:''
+                mobile:'12345',
+                code:'12345'
             },
             checked: false
         }
     },
     methods:{
         onLogin(){
-            const user = this.user
-            request({
-                methods: 'POST',
-                url: '/login',
-                data: user
-            }).then(res => {
-                console.log(res)
-                this.$message({
-                    message: '恭喜你，这是一条成功消息',
-                     type: 'success'
-                })
-                this.$router.push({
-                    name: 'home'
-                })
-            }).catch(err => {
-                console.log('登录失败',err)
-                this.$message.err('登录失败，手机号或验证码错误')
+            this.$router.push({
+                name: '/home'
             })
-        }
+    //         const user = this.user
+    //         request({
+    //             methods: 'POST',
+    //             url: '/login',
+    //             data: user
+    //         }).then(res => {
+    //             console.log(res)
+    //             this.$message({
+    //                 message: '恭喜你，这是一条成功消息',
+    //                  type: 'success'
+    //             })
+    //             this.$router.push({
+    //                 name: 'home'
+    //             })
+    //         }).catch(err => {
+    //             console.log('登录失败',err)
+    //             this.$message.err('登录失败，手机号或验证码错误')
+    //         })
+         }
+      }
     }
-}
 </script>
 
 <style>
